@@ -76,16 +76,5 @@ public class Collections {
         System.out.println(cadastros.get(3));
         cadastros.remove(3);
         cadastros.entrySet().forEach(System.out::println);
-
-        class Produto {
-            String nome;
-            double valor;
-
-            List<Produto> produtos = new ArrayList<Produto>();
-
-
-
-        }
-
     }
 }
