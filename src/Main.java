@@ -91,7 +91,18 @@ public class Main {
         });
 
 
+        List<Produto> produtosOrdenadosPorPreco =
+                produtos.stream()
+                        .sorted(Comparator.comparing(Produto::getPreco))
+                        .toList();
+        produtosOrdenadosPorPreco.forEach(
+                p -> System.out.println(p.getNome())
+        );
 
+        double total = produtos.stream()
+                .map(Produto::getPreco)
+                .reduce(0.0, Double::sum);
+        System.out.println(total);
 
     }
 }
